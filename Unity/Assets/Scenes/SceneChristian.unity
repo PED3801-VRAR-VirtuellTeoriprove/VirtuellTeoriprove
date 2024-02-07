@@ -255,8 +255,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 825342486}
+  - component: {fileID: 825342487}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: MMContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,6 +283,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &825342487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825342485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ea2c8c1c2fde6469b767f47cd16add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToHide: {fileID: 830588614}
+  closeButton: {fileID: 981782124}
 --- !u!1 &830588610
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,17 +406,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830588610}
-  m_LocalRotation: {x: -0, y: 0.9927423, z: -0, w: 0.12026159}
-  m_LocalPosition: {x: 0, y: 0, z: -0.41}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.498}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 825342486}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 166.186, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.11, y: 0.33}
+  m_AnchoredPosition: {x: -2.03, y: -0.847}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &877661543
@@ -417,7 +432,7 @@ GameObject:
   - component: {fileID: 877661545}
   - component: {fileID: 877661547}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MMWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,19 +445,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877661543}
-  m_LocalRotation: {x: -0, y: -0.38051003, z: -0, w: 0.9247768}
-  m_LocalPosition: {x: 0, y: 0, z: -1.75}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1882789518}
   - {fileID: 981782123}
   m_Father: {fileID: 825342486}
-  m_LocalEulerAnglesHint: {x: 0, y: -44.731, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5499992, y: -0.049999237}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.00000023841858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877661545
 MonoBehaviour:
@@ -502,8 +517,8 @@ MonoBehaviour:
   m_MovementSpeedVariancePercentage: 0.25
   m_SnapOnEnable: 1
   m_PositionFollowMode: 1
-  m_MinDistanceAllowed: 1
-  m_MaxDistanceAllowed: 1
+  m_MinDistanceAllowed: 0.5
+  m_MaxDistanceAllowed: 1.5
   m_TimeUntilThresholdReachesMaxDistance: 0.1
   m_RotationFollowMode: 1
   m_MinAngleAllowed: 0.1
@@ -522,7 +537,7 @@ GameObject:
   - component: {fileID: 981782125}
   - component: {fileID: 981782124}
   m_Layer: 5
-  m_Name: Button
+  m_Name: MMButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +552,7 @@ RectTransform:
   m_GameObject: {fileID: 981782122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1490191062}
@@ -545,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981782124
@@ -729,7 +744,7 @@ GameObject:
   - component: {fileID: 1490191064}
   - component: {fileID: 1490191063}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MMBText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,7 +789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Close Window
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1314,7 +1329,7 @@ GameObject:
   - component: {fileID: 1882789520}
   - component: {fileID: 1882789519}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MMText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1359,7 +1374,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Welcome to Drivers
+
+    Test Demo in VR!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1386,8 +1403,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
