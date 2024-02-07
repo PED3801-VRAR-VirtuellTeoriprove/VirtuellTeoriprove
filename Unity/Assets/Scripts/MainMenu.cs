@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    private TextMeshProUGUI textMeshPro;
+    public Canvas canvasToHide;
+    public Button closeButton;
     // Start is called before the first frame update
     void Start()
     {
-        textMeshPro = GetComponent<TextMeshProUGUI>();
-        textMeshPro.text = "Hello world!";
+        closeButton.onClick.AddListener(CloseMainMenu);
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    void CloseButtonPress() {
-        
+    void CloseMainMenu() {
+        canvasToHide.gameObject.SetActive(false);
     }
 }
