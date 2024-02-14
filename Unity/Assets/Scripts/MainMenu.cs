@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Connect button click to function that closes mainmenu
         closeButton.onClick.AddListener(CloseMainMenu);
     }
 
@@ -22,5 +23,10 @@ public class MainMenu : MonoBehaviour
 
     void CloseMainMenu() {
         canvasToHide.gameObject.SetActive(false);
+    }
+
+    void OnDestroy()
+    {
+        closeButton.onClick.RemoveListener(CloseMainMenu);
     }
 }
