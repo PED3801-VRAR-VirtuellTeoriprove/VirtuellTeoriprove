@@ -15,10 +15,6 @@ public class MultipleChoiceMenu : MonoBehaviour
     void Start()
     {
         toggleButton.onClick.AddListener(TogglePanelVisibility);
-        for (int i = 0; i < 4; i++)
-        {
-            answerButtons[i].onClick.AddListener(() => CheckAnswer(i));
-        }
     }
 
     // Update is called once per frame
@@ -55,10 +51,13 @@ public class MultipleChoiceMenu : MonoBehaviour
         correctAnswer = correct;
     }
 
-    void CheckAnswer(int answer)
+    public void CheckAnswer(int answer)
     {
+        Debug.Log("Clicked: " + answer);
+        Debug.Log("Correct: " + correctAnswer);
         if (answer == correctAnswer)
         {
+            
             Debug.Log("Correct Answer");
         }
         else
