@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
+  - TriggerPlane1
+  - OptionWrong
+  - OptionRight
   layers:
   - Default
   - TransparentFX
