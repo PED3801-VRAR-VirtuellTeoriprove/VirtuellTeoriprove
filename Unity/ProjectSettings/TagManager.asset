@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - TriggerPlane1
+  - OptionWrong
+  - OptionRight
   layers:
   - Default
   - TransparentFX
