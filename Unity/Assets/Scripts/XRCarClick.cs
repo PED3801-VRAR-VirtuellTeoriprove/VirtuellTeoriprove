@@ -10,7 +10,7 @@ public class XRCarClick : MonoBehaviour
 {
     private XRSimpleInteractable interactable;
     public Transform bodyOrigin;
-    public DynamicMoveProvider bodyMove;
+    // public DynamicMoveProvider bodyMove;
     public Transform driverSeat;
 
     void Start()
@@ -21,22 +21,21 @@ public class XRCarClick : MonoBehaviour
 
     void HandleSelectEntered(SelectEnterEventArgs args)
     {
-        bodyOrigin.position = driverSeat.position;
-        bodyOrigin.rotation = driverSeat.rotation;
+        ResetChildrenPose(bodyOrigin.gameObject);
+        bodyOrigin.transform.SetParent(driverSeat);
+        ResetChildrenPose(driverSeat.gameObject);
 
-        ResetChildren(bodyOrigin.gameObject);
-
-        bodyMove.enabled = false;
+        // bodyMove.enabled = false;
         // Code to handle "click" event
         Debug.Log("Car was clicked (selected)");
     }
 
-    void ResetChildren(GameObject gameObject)
+    void ResetChildrenPose(GameObject gameObject)
     {
         foreach (Transform child in gameObject.transform)
         {
             child.localPosition = Vector3.zero;
-            child.gameObject.SetActive(true);
+            child.localRotation = Quaternion.identity;
         }
     }
     void OnDestroy()
