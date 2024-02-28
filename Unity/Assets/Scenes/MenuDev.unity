@@ -591,7 +591,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 231786809}
         m_TargetAssemblyTypeName: MultipleChoiceMenu, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 231786809}
         m_TargetAssemblyTypeName: MultipleChoiceMenu, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -891,6 +891,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 970771838725575524, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1425561985642842871, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_UseLocalSpace
       value: 1
@@ -1101,7 +1105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3999487018415155954, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_CameraYOffset
-      value: 1.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999487018415155954, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4592956391713993908, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_Name
@@ -1169,7 +1177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8189171602916567492, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_Height
-      value: 1.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159519855357366133, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1356,7 +1368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 231786809}
         m_TargetAssemblyTypeName: MultipleChoiceMenu, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -1669,7 +1681,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 231786809}
         m_TargetAssemblyTypeName: MultipleChoiceMenu, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 3
@@ -1989,7 +2001,13 @@ PrefabInstance:
     - {fileID: -8871113324803652905, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
     - {fileID: -4985822865224981533, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1471972075}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1471972076}
   m_SourcePrefab: {fileID: 100100000, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
 --- !u!4 &753622153 stripped
 Transform:
@@ -2064,7 +2082,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &928250290
@@ -2661,6 +2679,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5ec0631a50840efda2579aae1e4e2f3, type: 3}
   m_PrefabInstance: {fileID: 1423243991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1471972074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e4be12b30f7e647e78c75148b558cf7d, type: 3}
+  m_PrefabInstance: {fileID: 753622152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!154 &1471972075
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471972074}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
+--- !u!218 &1471972076
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471972074}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 0}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 1
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 0
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
 --- !u!1 &1545357220
 GameObject:
   m_ObjectHideFlags: 0

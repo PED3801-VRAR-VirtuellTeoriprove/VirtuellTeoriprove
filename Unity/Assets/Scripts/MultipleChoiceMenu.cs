@@ -22,9 +22,6 @@ public class MultipleChoiceMenu : MonoBehaviour
         if (correctAnswerEvent == null)
             correctAnswerEvent = new UnityEvent();
         toggleButton.onClick.AddListener(TogglePanelVisibility);
-        foreach (Button button in answerButtons) {
-            button.onClick.AddListener(CheckAnswer);
-        }
     }
 
     // Update is called once per frame
