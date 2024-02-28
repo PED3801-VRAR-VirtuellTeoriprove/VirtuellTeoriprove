@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -8,38 +9,40 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class XRCarClick : MonoBehaviour
 {
-    private XRSimpleInteractable interactable;
-    public Transform bodyOrigin;
-    // public DynamicMoveProvider bodyMove;
-    public Transform driverSeat;
+    public XROrigin xrorigin;
+    public GameObject cameraOffset;
+    public XRBaseInteractable carInteractable;
+    public XRBaseInteractor teleportInteractor;
+    public XRRayInteractor teleportRayInteractor;
+    public GameObject driverSeat;
+    public Canvas startMenu;
 
     void Start()
     {
-        interactable = GetComponent<XRSimpleInteractable>();
-        interactable.selectEntered.AddListener(HandleSelectEntered);
+        carInteractable.selectEntered.AddListener(HandleSelectEntered);
     }
 
-    void HandleSelectEntered(SelectEnterEventArgs args)
+    private void HandleSelectEntered(SelectEnterEventArgs args)
     {
-        ResetChildrenPose(bodyOrigin.gameObject);
-        bodyOrigin.transform.SetParent(driverSeat);
-        ResetChildrenPose(driverSeat.gameObject);
-
-        // bodyMove.enabled = false;
-        // Code to handle "click" event
-        Debug.Log("Car was clicked (selected)");
-    }
-
-    void ResetChildrenPose(GameObject gameObject)
-    {
-        foreach (Transform child in gameObject.transform)
+        Debug.Log("Select entered");
+        if ((Object)args.interactorObject == (Object)teleportInteractor)
         {
-            child.localPosition = Vector3.zero;
-            child.localRotation = Quaternion.identity;
+            Debug.Log("Teleport interactor selected");
+            //Make the XR Rig a child of the car
+            xrorigin.transform.parent = carInteractable.transform;
+
+            UnityEngine.Vector3 offset = xrorigin.transform.position - cameraOffset.transform.position;
+            xrorigin.transform.position = driverSeat.transform.position + offset;
+            xrorigin.transform.rotation = driverSeat.transform.rotation;
+
+            teleportRayInteractor.enabled = false;
+            startMenu.gameObject.SetActive(true);
+
         }
     }
-    void OnDestroy()
+
+    private void OnDisable()
     {
-        interactable.selectEntered.RemoveListener(HandleSelectEntered);
+        carInteractable.selectEntered.RemoveListener(HandleSelectEntered);
     }
 }
