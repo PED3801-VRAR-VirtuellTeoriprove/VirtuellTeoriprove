@@ -8,9 +8,11 @@ public class CarMenu : MonoBehaviour
 {
     private bool triggered = false;
     private float startTime;
-    private const float minSpeed = 0f;
-    private const float maxSpeed = 0.5f;
+    // private const float minSpeed = 0f;
+    // private const float maxSpeed = 0.5f;
     private const float transitionTime = 2f;
+    private Vector3 velocity = Vector3.zero;
+    public GameObject targetPosition;
     public Canvas canvasToHide;
     public Button closeButton;
     public GameObject car;
@@ -25,21 +27,29 @@ public class CarMenu : MonoBehaviour
     void Update()
     {
         if (triggered) {
-            float deltaX;
+            // float deltaX;
             float t = (Time.time - startTime) / transitionTime;
-            Debug.Log($"Triggered is true, time: {t}");
-            if (t < 1) {
-                deltaX = Mathf.SmoothStep(minSpeed, maxSpeed, t);
-            }
-            else if (t < 2) {
-                deltaX = Mathf.SmoothStep(maxSpeed, minSpeed, t-1);
+            // Debug.Log($"Triggered is true, time: {t}");
+            // if (t < 1) {
+            //     deltaX = Mathf.SmoothStep(minSpeed, maxSpeed, t);
+            // }
+            // else if (t < 2) {
+            //     deltaX = Mathf.SmoothStep(maxSpeed, minSpeed, t-1);
+            // }
+            // else {
+            //     triggered = false;
+            //     canvasToHide.gameObject.SetActive(true);
+            //     return;
+            // }
+            // car.transform.Translate(new Vector3(0, 0, deltaX), Space.Self);
+            if (t <= 1) {
+                car.transform.position = Vector3.SmoothDamp(car.transform.position, targetPosition.transform.position, ref velocity, transitionTime);
             }
             else {
                 triggered = false;
-                canvasToHide.gameObject.SetActive(true);
+                // canvasToHide.gameObject.SetActive(true);
                 return;
             }
-            car.transform.Translate(new Vector3(0, 0, deltaX), Space.Self);
         }
     }
 

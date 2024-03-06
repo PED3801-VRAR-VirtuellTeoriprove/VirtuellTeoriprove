@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Events;
 using UnityEngine.InputSystem.UI;
 
 public class PlayerScript : MonoBehaviour
 {
     // Get UI Multiple Choice Canvas object
-    public GameObject multipleChoiceCanvas;
+    public GameObject q1Canvas;
     public TMP_Text scoreNumber;
     public int score;
     void Start()
     {
         // Hide the Multiple Choice Canvas
-        multipleChoiceCanvas.SetActive(false);
-        multipleChoiceCanvas.GetComponent<MultipleChoiceMenu>().correctAnswerEvent.AddListener(CorrectAnswer);
-        multipleChoiceCanvas.GetComponent<MultipleChoiceMenu>().wrongAnswerEvent.AddListener(WrongAnswer);
+        q1Canvas.SetActive(false);
+        q1Canvas.GetComponent<MultipleChoiceMenu>().correctAnswerEvent.AddListener(CorrectAnswer);
+        q1Canvas.GetComponent<MultipleChoiceMenu>().wrongAnswerEvent.AddListener(WrongAnswer);
         score = 0;
     }
 
@@ -30,23 +31,36 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log(other.gameObject.tag);
         // If the player enters the trigger area
-        if (other.gameObject.tag is "TriggerPlane1")
+        switch(other.gameObject.tag)
         {
-            MultipleChoiceMenu canvasScript = multipleChoiceCanvas.GetComponent<MultipleChoiceMenu>();
-            // Show the Multiple Choice Canvas
-            other.gameObject.SetActive(false);
-            multipleChoiceCanvas.SetActive(true);
+            // case "TriggerPlane1":
+            //     MultipleChoiceMenu canvasScript = q1Canvas.GetComponent<MultipleChoiceMenu>();
+            //     // Show the Multiple Choice Canvas
+            //     other.gameObject.SetActive(false);
+            //     q1Canvas.SetActive(true);
 
-            canvasScript.SetQuestion("What is the capital of France?");
-            canvasScript.SetAnswers(new string[] {"Paris", "London", "Berlin", "Madrid"});
-            canvasScript.SetCorrectAnswer(0);
+            //     canvasScript.SetQuestion("What is the capital of France?");
+            //     canvasScript.SetAnswers(new string[] {"Paris", "London", "Berlin", "Madrid"});
+            //     canvasScript.SetCorrectAnswer(0);
+            //     break;
+            case "TriggerPlaneQ1":
+                Debug.Log("TriggerPlaneQ1 Collided");
+                MultipleChoiceMenu canvasScript = q1Canvas.GetComponent<MultipleChoiceMenu>();
+                other.gameObject.SetActive(false);
+                q1Canvas.SetActive(true);
+
+                canvasScript.SetQuestion("Hva burde du gjøre i denne situasjonen?");
+                canvasScript.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
+                canvasScript.SetCorrectAnswer(0);
+                break;
         }
+        
     }
 
     public void CorrectAnswer()
     {
         Debug.Log("From player: Correct Answer");
-        multipleChoiceCanvas.SetActive(false);
+        q1Canvas.SetActive(false);
         score++;
         
         scoreNumber.text = "" + score;
@@ -57,7 +71,7 @@ public class PlayerScript : MonoBehaviour
     {
         // TODO: Do some instructive shit
         Debug.Log("From player: Wrong Answer");
-        multipleChoiceCanvas.SetActive(false);
+        q1Canvas.SetActive(false);
 
     }
 }
