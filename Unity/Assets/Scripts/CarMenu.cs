@@ -9,8 +9,8 @@ public class CarMenu : MonoBehaviour
     private bool triggered = false;
     private float startTime;
     private const float minSpeed = 0f;
-    private const float maxSpeed = 0.1f;
-    private const float transitionTime = 1f;
+    private const float maxSpeed = 0.5f;
+    private const float transitionTime = 2f;
     public Canvas canvasToHide;
     public Button closeButton;
     public GameObject car;
@@ -39,11 +39,11 @@ public class CarMenu : MonoBehaviour
                 canvasToHide.gameObject.SetActive(true);
                 return;
             }
-            car.transform.localPosition += new Vector3(0, 0, -deltaX);
+            car.transform.Translate(new Vector3(0, 0, deltaX), Space.Self);
         }
     }
 
-    void StartTrigger() {
+    public void StartTrigger() {
         Debug.Log("StartTrigger is called");
         canvasToHide.gameObject.SetActive(false);
         triggered = true;
