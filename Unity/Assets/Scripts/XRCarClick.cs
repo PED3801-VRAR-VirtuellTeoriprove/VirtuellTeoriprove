@@ -25,7 +25,7 @@ public class XRCarClick : MonoBehaviour
     private void HandleSelectEntered(SelectEnterEventArgs args)
     {
         Debug.Log("Select entered");
-        if ((Object)args.interactorObject == (Object)teleportInteractor)
+        if ((Object)args.interactorObject == (Object)teleportRayInteractor)
         {
             Debug.Log("Teleport interactor selected");
             //Make the XR Rig a child of the car
@@ -35,7 +35,8 @@ public class XRCarClick : MonoBehaviour
             xrorigin.transform.position = driverSeat.transform.position + offset;
             xrorigin.transform.rotation = driverSeat.transform.rotation;
 
-            teleportRayInteractor.enabled = false;
+            teleportInteractor.enabled = false;
+            teleportRayInteractor.enabled = true;
             startMenu.gameObject.SetActive(true);
 
         }

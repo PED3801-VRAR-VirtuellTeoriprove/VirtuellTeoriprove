@@ -8,9 +8,9 @@ public class CarMenu : MonoBehaviour
 {
     private bool triggered = false;
     private float startTime;
-    private const float minSpeed = 1f;
-    private const float maxSpeed = 10f;
-    private const float transitionTime = 10f;
+    private const float minSpeed = 0f;
+    private const float maxSpeed = 0.1f;
+    private const float transitionTime = 1f;
     public Canvas canvasToHide;
     public Button closeButton;
     public GameObject car;
@@ -39,7 +39,7 @@ public class CarMenu : MonoBehaviour
                 canvasToHide.gameObject.SetActive(true);
                 return;
             }
-            car.transform.position += new Vector3(deltaX, 0, 0);
+            car.transform.localPosition += new Vector3(0, 0, -deltaX);
         }
     }
 
