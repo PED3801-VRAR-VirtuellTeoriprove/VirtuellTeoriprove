@@ -27,11 +27,12 @@ public class CarControl : MonoBehaviour
         if (beginQ1) {
             t = (Time.time - startTime) / transitionTime;
 
-            if (t <= 1) {
+            if (t <= 2) {
                 transform.position = Vector3.SmoothDamp(transform.position, q1Position.position, ref velocity, transitionTime);
             }
-            else {
+            else if (t > 2){
                 beginQ1 = false;
+                Debug.Log("Finished moving to Q1");
                 return;
             }
         }
@@ -43,11 +44,12 @@ public class CarControl : MonoBehaviour
                 // Makes cars orientation to also rotate with left side pointing towards the pivot
                 transform.rotation = Quaternion.LookRotation(transform.forward, transform.up);
             }
-            else if (t <= 3 && t > 1) {
+            else if (t <= 4 && t > 2) {
                 transform.position = Vector3.SmoothDamp(transform.position, q2Position.position, ref velocity, transitionTime);
             }
-            else if (t > 3) {
+            else if (t > 4) {
                 beginQ2 = false;
+                Debug.Log("Finished moving to Q2");
                 return;
             }
         }
