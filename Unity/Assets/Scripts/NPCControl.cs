@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarControl : MonoBehaviour
+public class NPCControl : MonoBehaviour
 {
     // Start is called before the first frame update
     private int state = 0;
@@ -13,9 +13,11 @@ public class CarControl : MonoBehaviour
     private float t;
     private const float transitionTime = 2f;
     private Vector3 velocity = Vector3.zero;
-    public Transform q1Position;
-    public Transform q2Position;
-    public Transform q2Pivot;
+    public Transform[] cars;
+    public Transform[] q1Positions;
+    public Transform[] q2Positions;
+    public Transform[] q1Pivots;
+    public Transform[] q2Pivots;
     void Start()
     {
         
@@ -28,7 +30,7 @@ public class CarControl : MonoBehaviour
             t = (Time.time - startTime) / transitionTime;
 
             if (t <= 1) {
-                transform.position = Vector3.SmoothDamp(transform.position, q1Position.position, ref velocity, transitionTime);
+                cars[0].position = Vector3.SmoothDamp(cars[0].position, q1Positions[0].position, ref velocity, transitionTime);
             }
             else {
                 beginQ1 = false;
@@ -38,15 +40,13 @@ public class CarControl : MonoBehaviour
         else if (beginQ2) {
             t = (Time.time - startTime) / transitionTime;
 
-            if (t <= 2 && t > 1) {
-                transform.RotateAround(q2Pivot.position, Vector3.up, -90 * Time.deltaTime / transitionTime);
-                // Makes cars orientation to also rotate with left side pointing towards the pivot
-                transform.rotation = Quaternion.LookRotation(transform.forward, transform.up);
+            if (t <= 1) {
+                cars[0].position = Vector3.SmoothDamp(cars[0].position, q2Positions[0].position, ref velocity, transitionTime);
             }
-            else if (t <= 3 && t > 1) {
-                transform.position = Vector3.SmoothDamp(transform.position, q2Position.position, ref velocity, transitionTime);
+            else if (t <= 3 && t > 2) {
+                cars[1].position = Vector3.SmoothDamp(cars[1].position, q2Positions[1].position, ref velocity, transitionTime);
             }
-            else if (t > 3) {
+            else if (t > 3){
                 beginQ2 = false;
                 return;
             }
@@ -54,7 +54,6 @@ public class CarControl : MonoBehaviour
     }
 
     public void MoveToNextQ() {
-        Debug.Log($"In state {state}");
         switch (state) {
             case 0:
                 MoveToQ1();
@@ -67,7 +66,6 @@ public class CarControl : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log($"Changed to {state}");
     }
 
     private void MoveToQ1() {

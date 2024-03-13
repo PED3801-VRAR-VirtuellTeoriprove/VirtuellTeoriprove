@@ -24,10 +24,8 @@ public class XRCarClick : MonoBehaviour
 
     private void HandleSelectEntered(SelectEnterEventArgs args)
     {
-        Debug.Log("Select entered");
         if ((Object)args.interactorObject == (Object)rayInteractor)
         {
-            Debug.Log("Teleport interactor selected");
             //Make the XR Rig a child of the car
             xrorigin.transform.parent = carTeleportAnchor.transform;
 

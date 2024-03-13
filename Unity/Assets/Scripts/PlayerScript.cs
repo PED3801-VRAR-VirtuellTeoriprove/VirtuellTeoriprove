@@ -37,7 +37,6 @@ public class PlayerScript : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "TriggerPlaneQ1":
-                Debug.Log("TriggerPlaneQ1 Collided");
                 canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
                 other.gameObject.SetActive(false);
                 qCanvas.SetActive(true);
@@ -47,14 +46,13 @@ public class PlayerScript : MonoBehaviour
                 canvasScript.SetCorrectAnswer(2);
                 break;
             case "TriggerPlaneQ2":
-                Debug.Log("TriggerPlaneQ2 Collided");
                 canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
                 other.gameObject.SetActive(false);
                 qCanvas.SetActive(true);
 
                 canvasScript.SetQuestion("Q2: Hvem har du vikeplikt for om du skal til høyre?");
                 canvasScript.SetAnswers(new string[] {"Venstre", "Begge", "Høyre", "Ingen"});
-                canvasScript.SetCorrectAnswer(1);
+                canvasScript.SetCorrectAnswer(0);
                 break;
             default:
                 break;

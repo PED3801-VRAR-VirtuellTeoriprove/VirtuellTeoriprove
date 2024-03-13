@@ -21,7 +21,6 @@ public class CarMenu : MonoBehaviour
     }
 
     public void hideCanvas() {
-        Debug.Log("StartTrigger is called, hiding canvas");
         canvasToHide.gameObject.SetActive(false);
     }
 
