@@ -9,6 +9,7 @@ TagManager:
   - OptionWrong
   - OptionRight
   - TriggerPlaneQ1
+  - TriggerPlaneQ2
   layers:
   - Default
   - TransparentFX

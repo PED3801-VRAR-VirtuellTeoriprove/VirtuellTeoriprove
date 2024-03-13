@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
+        Debug.Log($"Collided into {other.gameObject.tag}");
         // If the player enters the trigger area
         switch(other.gameObject.tag)
         {
@@ -49,9 +49,19 @@ public class PlayerScript : MonoBehaviour
                 other.gameObject.SetActive(false);
                 q1Canvas.SetActive(true);
 
-                canvasScript.SetQuestion("Hva burde du gjøre i denne situasjonen?");
+                canvasScript.SetQuestion("Q1: Hva burde du gjøre i denne situasjonen?");
                 canvasScript.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
-                canvasScript.SetCorrectAnswer(0);
+                canvasScript.SetCorrectAnswer(2);
+                break;
+            case "TriggerPlaneQ2":
+                Debug.Log("TriggerPlaneQ2 Collided");
+                MultipleChoiceMenu canvasScript2 = q1Canvas.GetComponent<MultipleChoiceMenu>();
+                other.gameObject.SetActive(false);
+                q1Canvas.SetActive(true);
+
+                canvasScript2.SetQuestion("Q2: Hva burde du gjøre i denne situasjonen?");
+                canvasScript2.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
+                canvasScript2.SetCorrectAnswer(2);
                 break;
         }
         
