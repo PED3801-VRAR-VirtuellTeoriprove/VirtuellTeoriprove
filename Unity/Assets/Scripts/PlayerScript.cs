@@ -9,15 +9,18 @@ using UnityEngine.InputSystem.UI;
 public class PlayerScript : MonoBehaviour
 {
     // Get UI Multiple Choice Canvas object
-    public GameObject q1Canvas;
+    private MultipleChoiceMenu canvasScript;
+    public GameObject qCanvas;
     public TMP_Text scoreNumber;
     public int score;
     void Start()
     {
         // Hide the Multiple Choice Canvas
-        q1Canvas.SetActive(false);
-        q1Canvas.GetComponent<MultipleChoiceMenu>().correctAnswerEvent.AddListener(CorrectAnswer);
-        q1Canvas.GetComponent<MultipleChoiceMenu>().wrongAnswerEvent.AddListener(WrongAnswer);
+        qCanvas.SetActive(false);
+
+        qCanvas.GetComponent<MultipleChoiceMenu>().correctAnswerEvent.AddListener(CorrectAnswer);
+        qCanvas.GetComponent<MultipleChoiceMenu>().wrongAnswerEvent.AddListener(WrongAnswer);
+
         score = 0;
     }
 
@@ -31,23 +34,13 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log($"Collided into {other.gameObject.tag}");
         // If the player enters the trigger area
-        switch(other.gameObject.tag)
+        switch (other.gameObject.tag)
         {
-            // case "TriggerPlane1":
-            //     MultipleChoiceMenu canvasScript = q1Canvas.GetComponent<MultipleChoiceMenu>();
-            //     // Show the Multiple Choice Canvas
-            //     other.gameObject.SetActive(false);
-            //     q1Canvas.SetActive(true);
-
-            //     canvasScript.SetQuestion("What is the capital of France?");
-            //     canvasScript.SetAnswers(new string[] {"Paris", "London", "Berlin", "Madrid"});
-            //     canvasScript.SetCorrectAnswer(0);
-            //     break;
             case "TriggerPlaneQ1":
                 Debug.Log("TriggerPlaneQ1 Collided");
-                MultipleChoiceMenu canvasScript = q1Canvas.GetComponent<MultipleChoiceMenu>();
+                canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
                 other.gameObject.SetActive(false);
-                q1Canvas.SetActive(true);
+                qCanvas.SetActive(true);
 
                 canvasScript.SetQuestion("Q1: Hva burde du gjøre i denne situasjonen?");
                 canvasScript.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
@@ -55,13 +48,15 @@ public class PlayerScript : MonoBehaviour
                 break;
             case "TriggerPlaneQ2":
                 Debug.Log("TriggerPlaneQ2 Collided");
-                MultipleChoiceMenu canvasScript2 = q1Canvas.GetComponent<MultipleChoiceMenu>();
+                canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
                 other.gameObject.SetActive(false);
-                q1Canvas.SetActive(true);
+                qCanvas.SetActive(true);
 
-                canvasScript2.SetQuestion("Q2: Hva burde du gjøre i denne situasjonen?");
-                canvasScript2.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
-                canvasScript2.SetCorrectAnswer(2);
+                canvasScript.SetQuestion("Q2: Hvem har du vikeplikt for om du skal til høyre?");
+                canvasScript.SetAnswers(new string[] {"Venstre", "Begge", "Høyre", "Ingen"});
+                canvasScript.SetCorrectAnswer(1);
+                break;
+            default:
                 break;
         }
         
@@ -70,7 +65,7 @@ public class PlayerScript : MonoBehaviour
     public void CorrectAnswer()
     {
         Debug.Log("From player: Correct Answer");
-        q1Canvas.SetActive(false);
+        qCanvas.SetActive(false);
         score++;
         
         scoreNumber.text = "" + score;
@@ -81,7 +76,7 @@ public class PlayerScript : MonoBehaviour
     {
         // TODO: Do some instructive shit
         Debug.Log("From player: Wrong Answer");
-        q1Canvas.SetActive(false);
+        qCanvas.SetActive(false);
 
     }
 }

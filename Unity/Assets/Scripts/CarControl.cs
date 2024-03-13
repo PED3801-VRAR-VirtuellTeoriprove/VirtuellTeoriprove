@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarControl : MonoBehaviour
 {
     // Start is called before the first frame update
+    private int state = 0;
     private bool beginQ1 = false;
     private bool beginQ2 = false;
 
@@ -52,13 +53,28 @@ public class CarControl : MonoBehaviour
         }
     }
 
-    public void MoveToQ1() {
+    public void MoveToNextQ() {
+        switch (state) {
+            case 0:
+                MoveToQ1();
+                state = 1;
+                break;
+            case 1:
+                MoveToQ2();
+                state = 2;
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void MoveToQ1() {
         Debug.Log("Moving towards Q1");
         beginQ1 = true;
         startTime = Time.time;
     }
 
-    public void MoveToQ2() {
+    private void MoveToQ2() {
         Debug.Log("Moving towards Q2");
         beginQ2 = true;
         startTime = Time.time;
