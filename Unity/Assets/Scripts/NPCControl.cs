@@ -1,80 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NPCControl : MonoBehaviour
 {
     // Start is called before the first frame update
     private int state = 0;
-    private bool beginQ1 = false;
-    private bool beginQ2 = false;
+    private bool move_active = false;
 
     private float startTime;
     private float t;
     private const float transitionTime = 2f;
-    private Vector3 velocity = Vector3.zero;
+    private Vector3[] velocity;
+
+    [Tooltip("Array of car containers")]
     public Transform[] cars;
-    public Transform[] q1Positions;
-    public Transform[] q2Positions;
-    public Transform[] q1Pivots;
-    public Transform[] q2Pivots;
+    [System.Serializable]
+    public class CarStep
+    {
+        [Tooltip("List of car indexes to move for this step")]
+        public List<int> NPC_cars_to_move;
+    }
+
+    [System.Serializable]
+    public class Question
+    {
+        [Tooltip("List of steps for the question to be executed in order")]
+        public List<CarStep> NPC_cars_movement_order;
+    }
+    [Tooltip("List of questions to be executed")]
+    public List<Question> questions;
+
     void Start()
     {
-        
+        velocity = new Vector3[cars.Length];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (beginQ1) {
+        if (move_active) {
             t = (Time.time - startTime) / transitionTime;
+            List<CarStep> carOrder = questions[state].NPC_cars_movement_order;
 
-            if (t <= 1) {
-                cars[0].position = Vector3.SmoothDamp(cars[0].position, q1Positions[0].position, ref velocity, transitionTime);
+            for (int i = 0; i < carOrder.Count; i++) {
+                if (t > 2*i && t <= 2*(i+1)) {
+                    foreach (int carIndex in carOrder[i].NPC_cars_to_move) {
+                        Transform car = cars[carIndex].Find("Car");
+                        Transform targetPos = cars[carIndex].Find("Pos" + (state + 1));
+                        Debug.Log($"Moving car {carIndex} to {targetPos.position}");
+                        car.position = Vector3.SmoothDamp(car.position, targetPos.position, ref velocity[carIndex], transitionTime);
+                    }
+                }
             }
-            else {
-                beginQ1 = false;
-                return;
-            }
-        }
-        else if (beginQ2) {
-            t = (Time.time - startTime) / transitionTime;
 
-            if (t <= 1) {
-                cars[0].position = Vector3.SmoothDamp(cars[0].position, q2Positions[0].position, ref velocity, transitionTime);
-            }
-            else if (t <= 3 && t > 2) {
-                cars[1].position = Vector3.SmoothDamp(cars[1].position, q2Positions[1].position, ref velocity, transitionTime);
-            }
-            else if (t > 3){
-                beginQ2 = false;
+            if (t > 2*carOrder.Count){
+                move_active = false;
+                if (state < questions.Count - 1) {
+                    state++;
+                }
+                else {
+                    Debug.Log("Finished all questions");
+                }
                 return;
             }
         }
     }
-
     public void MoveToNextQ() {
-        switch (state) {
-            case 0:
-                MoveToQ1();
-                state = 1;
-                break;
-            case 1:
-                MoveToQ2();
-                state = 2;
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void MoveToQ1() {
-        beginQ1 = true;
-        startTime = Time.time;
-    }
-
-    private void MoveToQ2() {
-        beginQ2 = true;
+        move_active = true;
         startTime = Time.time;
     }
 }
