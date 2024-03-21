@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collided into {other.gameObject.tag}");
+        // Debug.Log($"Collided into {other.gameObject.tag}");
         // If the player enters the trigger area
         switch (other.gameObject.tag)
         {
