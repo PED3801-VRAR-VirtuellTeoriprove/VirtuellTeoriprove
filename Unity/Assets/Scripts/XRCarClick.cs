@@ -15,7 +15,7 @@ public class XRCarClick : MonoBehaviour
     public XRBaseInteractor teleportInteractor;
     public XRRayInteractor rayInteractor;
     public GameObject driverSeat;
-    public Canvas startMenu;
+    public GameObject startMenu;
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class XRCarClick : MonoBehaviour
             carTeleportAnchor.enabled = false;
             rayInteractor.enabled = true;
 
-            startMenu.gameObject.SetActive(true);
+            startMenu.SetActive(true);
 
 
         }
