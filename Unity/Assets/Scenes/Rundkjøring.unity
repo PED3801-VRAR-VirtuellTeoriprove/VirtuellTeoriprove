@@ -497,7 +497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &156612263
 Transform:
   m_ObjectHideFlags: 0
@@ -5107,89 +5107,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action_sequences:
   - movementProperties:
-    - distance: 0
+    - distance: 10
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 0
       isPivotLeft: 0
-      degrees: 0
+      degrees: 45
       radius: 0
       standby: 0
   - movementProperties:
     - distance: 0
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 1
       isPivotLeft: 0
-      degrees: 45
-      radius: 0
+      degrees: 15
+      radius: 50
       standby: 0
     - distance: 0
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 1
-      isPivotLeft: 0
-      degrees: 45
-      radius: 0
+      isPivotLeft: 1
+      degrees: 15
+      radius: 50
       standby: 0
-    - distance: 0
+    - distance: 5
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 0
       isPivotLeft: 0
       degrees: 0
       radius: 0
-      standby: 0
+      standby: 1
   - movementProperties:
     - distance: 0
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
-      isPivot: 0
+      velocity: 5
+      isPivot: 1
       isPivotLeft: 0
-      degrees: 0
-      radius: 0
+      degrees: 80
+      radius: 6
       standby: 0
     - distance: 0
       smoothIn: 0
       smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 1
-      isPivotLeft: 0
-      degrees: 45
-      radius: 0
-      standby: 0
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 1
-      isPivotLeft: 0
-      degrees: 140
-      radius: 0
-      standby: 0
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 1
-      isPivotLeft: 0
-      degrees: 70
-      radius: 0
+      isPivotLeft: 1
+      degrees: 160
+      radius: 20
       standby: 1
-    - distance: 0
-      smoothIn: 0
+    - distance: 5
+      smoothIn: 1
       smoothOut: 0
-      velocity: 0
-      isPivot: 0
+      velocity: 5
+      isPivot: 1
       isPivotLeft: 0
-      degrees: 0
+      degrees: 80
       radius: 0
-      standby: 1
+      standby: 0
 --- !u!1 &549947075
 GameObject:
   m_ObjectHideFlags: 0
@@ -6905,7 +6887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730232644
 Transform:
   m_ObjectHideFlags: 0
@@ -6959,38 +6941,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action_sequences:
   - movementProperties:
-    - distance: 0
-      smoothIn: 0
+    - distance: 10
+      smoothIn: 1
       smoothOut: 0
-      velocity: 0
-      isPivot: 0
-      isPivotLeft: 0
-      degrees: 0
-      radius: 0
-      standby: 0
-  - movementProperties:
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 1
-      isPivotLeft: 0
-      degrees: 45
-      radius: 0
-      standby: 0
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 1
-      isPivotLeft: 0
-      degrees: 45
-      radius: 0
-      standby: 0
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
+      velocity: 5
       isPivot: 0
       isPivotLeft: 0
       degrees: 0
@@ -7024,24 +6978,6 @@ MonoBehaviour:
       degrees: 140
       radius: 0
       standby: 0
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 1
-      isPivotLeft: 0
-      degrees: 70
-      radius: 0
-      standby: 1
-    - distance: 0
-      smoothIn: 0
-      smoothOut: 0
-      velocity: 0
-      isPivot: 0
-      isPivotLeft: 0
-      degrees: 0
-      radius: 0
-      standby: 1
 --- !u!114 &730232646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12123,7 +12059,7 @@ Transform:
   m_GameObject: {fileID: 1225796906}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -1.53, y: -0, z: 47.52}
+  m_LocalPosition: {x: -1.53, y: -0, z: 50.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -20971,7 +20907,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1288073745}
-  - {fileID: 545225610}
   - {fileID: 585843814}
   - {fileID: 1467456436}
   - {fileID: 248310085}
@@ -20981,4 +20916,5 @@ SceneRoots:
   - {fileID: 453903141}
   - {fileID: 1622056382}
   - {fileID: 286429985}
+  - {fileID: 545225610}
   - {fileID: 1007563907}
