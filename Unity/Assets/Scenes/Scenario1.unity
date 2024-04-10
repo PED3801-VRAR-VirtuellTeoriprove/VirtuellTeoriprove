@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23209,12 +23209,12 @@ MonoBehaviour:
   - triggerPlane: {fileID: 1547596890}
     question: "Du skal svinge til h\xF8yre, hva er riktig i denne situasjonen?"
     answers:
-    - text: "Jeg kan kj\xF8re ut etter bilen til venstre"
-      image: {fileID: 21300000, guid: 3b2e62babc5249f42921c2cd027852cd, type: 3}
     - text: "Jeg m\xE5 vente til begge har kj\xF8rt"
       image: {fileID: 21300000, guid: ace4e274c947abd6ba2865c2e58c8133, type: 3}
     - text: De andre har vikeplikt
       image: {fileID: 21300000, guid: cd67c6a987d7354e3ae36987bf93a205, type: 3}
+    - text: "Jeg kan kj\xF8re ut etter bilen til venstre"
+      image: {fileID: 21300000, guid: 3b2e62babc5249f42921c2cd027852cd, type: 3}
     correctAnswer: 2
     wrongAnswerFeedback: "Selv om du har vikeplikt for alle biler p\xE5 veien, hindrer
       du ikke bilen som kommer fra h\xF8yre ved \xE5 kj\xF8re til h\xF8yre. Derfor
