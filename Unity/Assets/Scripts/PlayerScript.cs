@@ -1,18 +1,61 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.XR.CoreUtils;
+using UnityEditor.PackageManager;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Events;
 using UnityEngine.InputSystem.UI;
 
+[Serializable]
+public class Answer
+{
+    public string text;
+    public Sprite image;
+}
+[Serializable]
+public class TheoryProblem
+{
+    public GameObject triggerPlane;
+    public String question;
+    public Answer[] answers;
+    public int correctAnswer;
+    public String wrongAnswerFeedback;
+    public String correctAnswerFeedback;
+}
+
 public class PlayerScript : MonoBehaviour
 {
+    private TheoryProblem get_problem(GameObject triggerPlane)
+    {
+        for (int i = 0; i < problems.Length; i++)
+        {
+            if (problems[i].triggerPlane.GetInstanceID() == triggerPlane.GetInstanceID())
+            {
+                return problems[i];
+            }
+        }
+        return null; // TODO: Throw or return error
+    }
+    
     // Get UI Multiple Choice Canvas object
     private MultipleChoiceMenu canvasScript;
+    // public GameObject multipleChoiceMenu;
     public GameObject qCanvas;
     public TMP_Text scoreNumber;
     public int score;
+
+    public GameObject feedbackPanelCorrect;
+    private TMP_Text feedbackTextCorrect;
+
+    public GameObject feedbackPanelWrong;
+    private TMP_Text feedbackTextWrong;
+
+    public TheoryProblem[] problems;
+
     void Start()
     {
         // Hide the Multiple Choice Canvas
@@ -21,6 +64,10 @@ public class PlayerScript : MonoBehaviour
         qCanvas.GetComponent<MultipleChoiceMenu>().correctAnswerEvent.AddListener(CorrectAnswer);
         qCanvas.GetComponent<MultipleChoiceMenu>().wrongAnswerEvent.AddListener(WrongAnswer);
 
+        feedbackTextCorrect = feedbackPanelCorrect.GetNamedChild("Text").GetComponent<TMP_Text>();
+        feedbackTextWrong = feedbackPanelWrong.GetNamedChild("Text").GetComponent<TMP_Text>();
+        
+        canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
         score = 0;
     }
 
@@ -32,30 +79,17 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Debug.Log($"Collided into {other.gameObject.tag}");
-        // If the player enters the trigger area
-        switch (other.gameObject.tag)
+        // If the player enters the plane trigger for the problems
+        var problem = get_problem(other.gameObject);
+        if (problem != null)
         {
-            case "TriggerPlaneQ1":
-                canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
-                other.gameObject.SetActive(false);
-                qCanvas.SetActive(true);
+            qCanvas.SetActive(true);
+            canvasScript.SetQuestion(problem.question);
+            canvasScript.SetAnswers(problem.answers);
+            canvasScript.SetCorrectAnswer(problem.correctAnswer);
 
-                canvasScript.SetQuestion("Q1: Hva burde du gjøre i denne situasjonen?");
-                canvasScript.SetAnswers(new string[] {"Kjøre til høyre", "Kjøre til venstre", "Vente", "Kjøre rett fram"});
-                canvasScript.SetCorrectAnswer(2);
-                break;
-            case "TriggerPlaneQ2":
-                canvasScript = qCanvas.GetComponent<MultipleChoiceMenu>();
-                other.gameObject.SetActive(false);
-                qCanvas.SetActive(true);
-
-                canvasScript.SetQuestion("Q2: Hvem har du vikeplikt for om du skal til høyre?");
-                canvasScript.SetAnswers(new string[] {"Venstre", "Begge", "Høyre", "Ingen"});
-                canvasScript.SetCorrectAnswer(0);
-                break;
-            default:
-                break;
+            feedbackTextCorrect.text = problem.correctAnswerFeedback;
+            feedbackTextWrong.text = problem.wrongAnswerFeedback;
         }
         
     }
@@ -67,6 +101,8 @@ public class PlayerScript : MonoBehaviour
         score++;
         
         scoreNumber.text = "" + score;
+        
+        feedbackPanelCorrect.SetActive(true);
 
     }
 
@@ -76,5 +112,6 @@ public class PlayerScript : MonoBehaviour
         Debug.Log("From player: Wrong Answer");
         qCanvas.SetActive(false);
 
+        feedbackPanelWrong.SetActive(true);
     }
 }
