@@ -16,10 +16,13 @@ public class XRCarClick : MonoBehaviour
     public XRRayInteractor rayInteractor;
     public GameObject driverSeat;
     public GameObject startMenu;
+    public GameObject carBody;
+    private MeshCollider bodyCollider;
 
     void Start()
     {
         carTeleportAnchor.selectEntered.AddListener(HandleSelectEntered);
+        bodyCollider = carBody.GetComponent<MeshCollider>();
     }
 
     private void HandleSelectEntered(SelectEnterEventArgs args)
