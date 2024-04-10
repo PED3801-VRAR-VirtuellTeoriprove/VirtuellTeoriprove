@@ -7,7 +7,7 @@ public class ToggleButtonScript : MonoBehaviour
 {
     public GameObject toggledObject;
 
-    void toggleObject()
+    public void toggleObject()
     {
         toggledObject.SetActive(!toggledObject.activeSelf);
     }

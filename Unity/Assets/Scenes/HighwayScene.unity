@@ -16536,10 +16536,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleButton: {fileID: 807887833}
   answerButtons:
-  - {fileID: 108592533}
-  - {fileID: 771617111}
-  - {fileID: 642719643}
-  - {fileID: 51056315}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   panel: {fileID: 5295435}
   questionText: {fileID: 220344611}
   correctAnswer: 2
@@ -23483,6 +23483,9 @@ MonoBehaviour:
   qCanvas: {fileID: 936598617}
   scoreNumber: {fileID: 921265500}
   score: 0
+  feedbackPanelCorrect: {fileID: 0}
+  feedbackPanelWrong: {fileID: 0}
+  problems: []
 --- !u!136 &1447960737
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -1,0 +1,331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: scene1_maincar
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 03e7438d3b162c144943e99b02e05933, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].distance
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].smoothIn
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].smoothOut
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].velocity
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[0].movementProperties.Array.data[0].standby
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].distance
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].velocity
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[0].standby
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].distance
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].velocity
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].isPivot
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].isPivotLeft
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].degrees
+    value: 90
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].radius
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[1].standby
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].distance
+    value: 16
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].smoothOut
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].velocity
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[1].movementProperties.Array.data[2].standby
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].distance
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].velocity
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[0].standby
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].distance
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].smoothIn
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].velocity
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[1].standby
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].distance
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].velocity
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].isPivot
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].degrees
+    value: 90
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].radius
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[2].standby
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].distance
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].smoothIn
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].smoothOut
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].velocity
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].isPivot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].isPivotLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].degrees
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].radius
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: action_sequences.Array.data[2].movementProperties.Array.data[3].standby
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
