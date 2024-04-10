@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6121,6 +6121,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &329981392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2640373353306503795, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_Name
+      value: Treklynge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.340191
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.55168766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.83405083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 113.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
 --- !u!1 &332795651
 GameObject:
   m_ObjectHideFlags: 0
@@ -25544,7 +25601,7 @@ MonoBehaviour:
       degrees: 90
       radius: 4
       standby: 0
-    - distance: 20
+    - distance: 10
       smoothIn: 0
       smoothOut: 0
       velocity: 6
@@ -32788,6 +32845,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096308932}
   m_Mesh: {fileID: 4300038, guid: d1e985c0fb2658c4bb66c0dd53fe253c, type: 3}
+--- !u!1001 &2100393313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2640373353306503795, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_Name
+      value: Treklynge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.889927
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.340191
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7357442
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.6863418
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7272791
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 453.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050479505107107631, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8f6827b92fc5c574b4cf7c8cf8a379b, type: 3}
 --- !u!1 &2112013235
 GameObject:
   m_ObjectHideFlags: 0
@@ -33898,3 +34012,5 @@ SceneRoots:
   - {fileID: 1488678158}
   - {fileID: 471089358}
   - {fileID: 1628484077}
+  - {fileID: 2100393313}
+  - {fileID: 329981392}
