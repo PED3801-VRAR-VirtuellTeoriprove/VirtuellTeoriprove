@@ -29,7 +29,7 @@ public class CarControl : MonoBehaviour
         public bool smoothOut;
         public float velocity;
         public bool isPivot;
-        public bool isPivotLeft;
+        public bool isLeft;
         public float degrees;
         public float radius;
         public float standby;
@@ -66,7 +66,7 @@ public class CarControl : MonoBehaviour
                     // Calculate linear distance between start and destination
                     distance = currentMovesProps[i].distance;
                 }
-                actionEndTime = timePassed + distance / currentMovesProps[i].velocity;
+                actionEndTime = timePassed + distance / currentMovesProps[i].velocity * (float)(1 + 0.1 * (currentMovesProps[i].smoothIn ? 1 : 0) + 0.1 * (currentMovesProps[i].smoothOut ? 1 : 0));
                 timePassed = actionEndTime;
 
                 if (t > actionStartTime && t <= actionEndTime) {
@@ -79,7 +79,7 @@ public class CarControl : MonoBehaviour
                     else if (currentMovesProps[i].isPivot) {
 
                         if (recentActionIndex != i) {
-                            if (currentMovesProps[i].isPivotLeft) {
+                            if (currentMovesProps[i].isLeft) {
                                 // Pivot point to the left
                                 pivotPoint = transform.position - transform.right * currentMovesProps[i].radius;
                             }
@@ -97,7 +97,7 @@ public class CarControl : MonoBehaviour
                         float deltaAngle = currentAngle - previousAngle;
                         previousAngle = currentAngle;
 
-                        if (currentMovesProps[i].isPivotLeft) {
+                        if (currentMovesProps[i].isLeft) {
                             // Rotate the car around the pivot point
                             transform.RotateAround(pivotPoint, Vector3.up, -deltaAngle);
                         }
