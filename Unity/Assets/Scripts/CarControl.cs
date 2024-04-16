@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CarControl : MonoBehaviour
 {
+    private const float pivotDistanceModifier = 0.8f;
     private int state = 0;
     private bool moveActive = false;
     private bool nextWaiting = false;
@@ -60,20 +61,21 @@ public class CarControl : MonoBehaviour
                     continue;
                 }
                 else if (currentMovesProps[i].isPivot) {
-                    distance = currentMovesProps[i].degrees * Mathf.Deg2Rad * currentMovesProps[i].radius;
+                    distance = currentMovesProps[i].degrees * Mathf.Deg2Rad * currentMovesProps[i].radius * pivotDistanceModifier;
                 }
                 else {
-                    // Calculate linear distance between start and destination
                     distance = currentMovesProps[i].distance;
                 }
-                actionEndTime = timePassed + distance / currentMovesProps[i].velocity * (float)(1 + 0.1 * (currentMovesProps[i].smoothIn ? 1 : 0) + 0.1 * (currentMovesProps[i].smoothOut ? 1 : 0));
+
+
+                actionEndTime = timePassed + distance / currentMovesProps[i].velocity;
+
+
                 timePassed = actionEndTime;
 
                 if (t > actionStartTime && t <= actionEndTime) {
-                    // Transform targetPos = currentMovesProps[i].destination;
                     float actionProgress = (t - actionStartTime) / (distance / currentMovesProps[i].velocity);
                     if (currentMovesProps[i].standby > 0) {
-                        // Skip this iteration if not standby
                         continue;
                     }
                     else if (currentMovesProps[i].isPivot) {
@@ -143,18 +145,20 @@ public class CarControl : MonoBehaviour
     }
 
     private float smoothProgress(float progress, bool smoothIn, bool smoothOut) {
-        // Smooth in/out if selected, else linear
         float smoothed_progress = progress;
 
-        // Smooth in - ease in cubic
-        if (progress >= 0 && progress < 0.5f && smoothIn) {
-            smoothed_progress = 0.5f * (float)Math.Pow(progress / 0.5f, 3);
+        if (smoothIn && smoothOut) {
+            // Smooth in and out - sigmoid function
+            float x = (progress - 0.5f) * 10;  // Adjust x to shift the sigmoid function
+            smoothed_progress = 1 / (1 + (float)Math.Exp(-x));
+        } else if (smoothIn) {
+            // Smooth in - ease in cubic using Unity's SmoothStep
+            smoothed_progress = Mathf.SmoothStep(0, 1, progress);
+        } else if (smoothOut) {
+            // Smooth out - ease out cubic using Unity's SmoothStep
+            smoothed_progress = Mathf.SmoothStep(1, 0, 1 - progress);
         }
-        // Smooth out - ease out cubic
-        else if (progress <= 1 && progress >= 0.5f && smoothOut) {
-            float p = progress - 1;
-            smoothed_progress = 1 - 0.5f * (float)Math.Abs(Math.Pow(p / 0.5f, 3));
-        }
+
         return smoothed_progress;
     }
     public void MoveToNextQ() {

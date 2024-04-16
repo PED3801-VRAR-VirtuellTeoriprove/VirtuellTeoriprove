@@ -21,11 +21,13 @@ public class XRCarClick : MonoBehaviour
     public GameObject carBody;
     public XRDeviceSimulator XR_DeviceSimulator;
     private MeshCollider bodyCollider;
+    private AudioSource audioSource;
 
     void Start()
     {
         carTeleportAnchor.selectEntered.AddListener(HandleSelectEntered);
         bodyCollider = carBody.GetComponent<MeshCollider>();
+        audioSource = GetComponent<AudioSource>();
         if (XR_DeviceSimulator.isActiveAndEnabled)
         {
             driverSeat.position = driverSeatSim.position;
@@ -37,6 +39,7 @@ public class XRCarClick : MonoBehaviour
         if ((Object)args.interactorObject == (Object)rayInteractor)
         {
             //Make the XR Rig a child of the car
+            audioSource.Play();
             xrorigin.transform.parent = carTeleportAnchor.transform;
 
             xrorigin.transform.position = driverSeat.position;
