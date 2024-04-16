@@ -42,6 +42,7 @@ public class XRCarClick : MonoBehaviour
             xrorigin.transform.position = driverSeat.position;
             xrorigin.transform.rotation = driverSeat.rotation;
 
+            bodyCollider.enabled = false;
             teleportInteractor.enabled = false;
             carTeleportAnchor.enabled = false;
             rayInteractor.enabled = true;
