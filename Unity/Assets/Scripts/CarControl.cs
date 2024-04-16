@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarControl : MonoBehaviour
 {
@@ -131,9 +132,6 @@ public class CarControl : MonoBehaviour
                 recentActionIndex = -1;
                 if (state < action_sequences.Count) {
                     state++;
-                }
-                else {
-                    Debug.Log("Finished all questions");
                 }
                 if (nextWaiting) {
                     nextWaiting = false;
