@@ -413,18 +413,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPCControl, Assembly-CSharp
-        m_MethodName: MoveToNextQ
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1679733517}
         m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
         m_MethodName: MoveToNextQ
@@ -1317,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30863808
@@ -3212,7 +3200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133825999
@@ -4721,7 +4709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216278294
@@ -4845,7 +4833,6 @@ GameObject:
   m_Component:
   - component: {fileID: 220344610}
   - component: {fileID: 220344615}
-  - component: {fileID: 220344612}
   - component: {fileID: 220344614}
   - component: {fileID: 220344613}
   m_Layer: 5
@@ -4874,14 +4861,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -10000}
   m_SizeDelta: {x: 2400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &220344612
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220344609}
-  m_CullTransparentMesh: 0
 --- !u!114 &220344613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6527,7 +6506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 44.7, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332795653
@@ -10040,18 +10019,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPCControl, Assembly-CSharp
-        m_MethodName: MoveToNextQ
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1679733517}
         m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
         m_MethodName: MoveToNextQ
@@ -10300,7 +10267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602761603
@@ -13365,7 +13332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -13374,7 +13341,7 @@ PrefabInstance:
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 936598619}
+      objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -13574,7 +13541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -13583,7 +13550,7 @@ PrefabInstance:
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 936598619}
+      objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -14391,7 +14358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 44.7, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823992993
@@ -16163,7 +16130,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936598618}
-  - component: {fileID: 936598619}
   - component: {fileID: 936598621}
   - component: {fileID: 936598620}
   m_Layer: 5
@@ -16195,33 +16161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &936598619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936598617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a24510d9e19bb5778f2909bbefba00c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleButton: {fileID: 807887833}
-  answerButtons:
-  - {fileID: 1682466232}
-  - {fileID: 1021886141}
-  - {fileID: 554350603}
-  - {fileID: 1822842048}
-  panel: {fileID: 5295435}
-  questionText: {fileID: 220344614}
-  correctAnswer: 2
-  wrongAnswerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  correctAnswerEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &936598620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24103,8 +24042,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447960735}
-  - component: {fileID: 1447960736}
   - component: {fileID: 1447960737}
+  - component: {fileID: 1447960738}
   m_Layer: 0
   m_Name: PlayerProps
   m_TagString: Untagged
@@ -24127,59 +24066,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 842352838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1447960736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447960734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cbabef4aa1a8bd0873eadd3c659ac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  qCanvas: {fileID: 936598617}
-  scoreNumber: {fileID: 921265500}
-  score: 0
-  feedbackPanelCorrect: {fileID: 826212780}
-  feedbackPanelWrong: {fileID: 518906436}
-  problems:
-  - triggerPlane: {fileID: 1126871221}
-    question: Hva er riktig i denne situasjonen?
-    answers:
-    - text: Jeg har vikeplikt fordi jeg kommer fra parkeringsplass.
-      image: {fileID: 21300000, guid: cd67c6a987d7354e3ae36987bf93a205, type: 3}
-    - text: "Bilen fra venstre har vikeplikt, p\xE5 grunn av h\xF8yreregelen."
-      image: {fileID: 21300000, guid: 7484f66ebe6c0794c9aaa03ed84cbe7c, type: 3}
-    - text: "Jeg er p\xE5 et tettbebygd str\xF8k og vikeplikt er ikke gjeldende."
-      image: {fileID: 21300000, guid: c056cd6ca8c30998e9f71e39a4320e35, type: 3}
-    - text: "Bilen bryter en trafikkregel og du b\xF8r tute for \xE5 varsle om feilen."
-      image: {fileID: 21300086, guid: 0e3a20452482efeeaae858bd86f6b771, type: 3}
-    correctAnswer: 0
-    wrongAnswerFeedback: "Bilen til venstre hadde vanligvis hatt vikeplikt etter
-      h\xF8yreregelen, men du kj\xF8rer ut fra en parkeringsplass, som ikke regnes
-      som en vei. Derfor har du vikeplikt for alle kj\xF8rende p\xE5 vei."
-    correctAnswerFeedback: "Riktig! Selv om den andre bilen har vikeplikt fra h\xF8yre,
-      gjelder dette ikke ved utkj\xF8ring fra parkeringsplass. Veldig bra!"
-  - triggerPlane: {fileID: 1547596890}
-    question: "Du skal svinge til h\xF8yre, hva er riktig i denne situasjonen?"
-    answers:
-    - text: "Jeg m\xE5 vente til begge bilene har kj\xF8rt"
-      image: {fileID: 21300000, guid: 7484f66ebe6c0794c9aaa03ed84cbe7c, type: 3}
-    - text: De andre bilene har vikeplikt
-      image: {fileID: 21300000, guid: cd67c6a987d7354e3ae36987bf93a205, type: 3}
-    - text: "Jeg kan kj\xF8re ut etter bilen til venstre har kj\xF8rt"
-      image: {fileID: 21300096, guid: ace4e274c947abd6ba2865c2e58c8133, type: 3}
-    - text: "Jeg har vikeplikt kun fra h\xF8yre side ved rask akselerasjon"
-      image: {fileID: 21300052, guid: 0e3a20452482efeeaae858bd86f6b771, type: 3}
-    correctAnswer: 2
-    wrongAnswerFeedback: "Selv om du har vikeplikt for alle biler p\xE5 veien, hindrer
-      du ikke bilen som kommer fra h\xF8yre ved \xE5 kj\xF8re til h\xF8yre. Derfor
-      kan du kj\xF8re rett etter bilen som kommer fra venstre."
-    correctAnswerFeedback: "Riktig! Du har vikeplikt for begge bilene, men du trenger
-      ikke vente p\xE5 bilen fra h\xF8yre for \xE5 kj\xF8re til h\xF8yre. Veldig
-      bra!"
 --- !u!136 &1447960737
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24203,6 +24089,74 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1447960738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447960734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cbabef4aa1a8bd0873eadd3c659ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qCanvas: {fileID: 936598617}
+  answerButtons:
+  - {fileID: 1682466232}
+  - {fileID: 1021886141}
+  - {fileID: 554350603}
+  - {fileID: 1822842048}
+  feedbackPanelCorrect: {fileID: 826212780}
+  feedbackPanelWrong: {fileID: 518906436}
+  problems:
+  - question: Hva er riktig i denne situasjonen?
+    triggerPlane: {fileID: 1126871221}
+    answers:
+    - text: Jeg har vikeplikt fordi jeg kommer fra parkeringsplass
+      isCorrect: 1
+      image: {fileID: 21300000, guid: cd67c6a987d7354e3ae36987bf93a205, type: 3}
+      feedback: "Riktig! Selv om den andre bilen har vikeplikt fra h\xF8yre, gjelder
+        dette ikke ved utkj\xF8ring fra parkeringsplass."
+    - text: "Bilen fra venstre har vikeplikt, p\xE5 grunn av h\xF8yreregelen"
+      isCorrect: 0
+      image: {fileID: 21300000, guid: 7484f66ebe6c0794c9aaa03ed84cbe7c, type: 3}
+      feedback: "Dessverre\u2026 Bilen til venstre hadde vanligvis hatt vikeplikt
+        etter h\xF8yreregelen, men du kj\xF8rer ut fra en parkeringsplass, som ikke
+        regnes som en vei."
+    - text: "Jeg er p\xE5 et tettbebygd str\xF8k og vikeplikt er ikke gjeldende"
+      isCorrect: 0
+      image: {fileID: 21300000, guid: c056cd6ca8c30998e9f71e39a4320e35, type: 3}
+      feedback: "Dessverre\u2026 Vikeplikt vil alltid gjelde p\xE5 en eller annen
+        m\xE5te."
+    - text: "Bilen bryter en trafikkregel og du b\xF8r tute for \xE5 varsle om feilen"
+      isCorrect: 0
+      image: {fileID: 21300086, guid: ace4e274c947abd6ba2865c2e58c8133, type: 3}
+      feedback: "Dessverre\u2026 Du b\xF8r ikke tute p\xE5 en bil fordi du mener
+        de bryter en trafikkregel."
+  - question: "Du skal svinge til h\xF8yre, hva er riktig i denne situasjonen?"
+    triggerPlane: {fileID: 1547596890}
+    answers:
+    - text: "Jeg m\xE5 vente til begge bilene har kj\xF8rt"
+      isCorrect: 0
+      image: {fileID: 21300000, guid: cd67c6a987d7354e3ae36987bf93a205, type: 3}
+      feedback: "Riktig! Du har vikeplikt for begge bilene, men du trenger ikke vente
+        p\xE5 bilen fra h\xF8yre for \xE5 kj\xF8re til h\xF8yre."
+    - text: De andre bilene har vikeplikt
+      isCorrect: 0
+      image: {fileID: 21300000, guid: 7484f66ebe6c0794c9aaa03ed84cbe7c, type: 3}
+      feedback: "Dessverre\u2026Du kan svinge til h\xF8yre uten \xE5 p\xE5virke bilen
+        som kommer fra h\xF8yre."
+    - text: "Jeg kan kj\xF8re ut etter bilen til venstre har kj\xF8rt"
+      isCorrect: 1
+      image: {fileID: 21300096, guid: ace4e274c947abd6ba2865c2e58c8133, type: 3}
+      feedback: "Dessverre\u2026De andre bilene er p\xE5 en forkj\xF8rsvei og har
+        ikke vikeplikt."
+    - text: "Jeg har vikeplikt kun fra h\xF8yre side ved rask akselerasjon"
+      isCorrect: 0
+      image: {fileID: 21300052, guid: 0e3a20452482efeeaae858bd86f6b771, type: 3}
+      feedback: "Dessverre\u2026 Akselerasjon vil ikke p\xE5virke din plikt til \xE5
+        vike."
 --- !u!1 &1448039339
 GameObject:
   m_ObjectHideFlags: 0
@@ -25392,7 +25346,7 @@ Transform:
   m_GameObject: {fileID: 1547596890}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 2.8, y: 0.41, z: 0.89}
+  m_LocalPosition: {x: 3.45, y: 0.41, z: 0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -26330,7 +26284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628484072}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.000017219689}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -16.66, y: 0.15, z: 29.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -26340,7 +26294,7 @@ Transform:
   - {fileID: 748835951}
   - {fileID: 323023115}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!114 &1628484078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26388,11 +26342,11 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 5
       isPivot: 1
-      isLeft: 0
+      isLeft: 1
       degrees: 90
       radius: 7
       standby: 0
-    - distance: 16
+    - distance: 14
       smoothIn: 0
       smoothOut: 1
       velocity: 5
@@ -26411,7 +26365,7 @@ MonoBehaviour:
       degrees: 0
       radius: 0
       standby: 2
-    - distance: 2
+    - distance: 4
       smoothIn: 1
       smoothOut: 0
       velocity: 4
@@ -29644,7 +29598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -29653,7 +29607,7 @@ PrefabInstance:
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 936598619}
+      objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -33603,7 +33557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085323483
@@ -34820,7 +34774,7 @@ PrefabInstance:
       objectReference: {fileID: 21300020, guid: 0e3a20452482efeeaae858bd86f6b771, type: 3}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -34829,7 +34783,7 @@ PrefabInstance:
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 936598619}
+      objectReference: {fileID: 0}
     - target: {fileID: 6092702964081246466, guid: 41462f2c0079205b288ec3e3b65f760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
