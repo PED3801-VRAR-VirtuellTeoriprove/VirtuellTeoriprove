@@ -155,7 +155,6 @@ public class CarControl : MonoBehaviour
             float p = progress - 1;
             smoothed_progress = 1 - 0.5f * (float)Math.Abs(Math.Pow(p / 0.5f, 3));
         }
-        Debug.Log("Smoothed progress: " + smoothed_progress + " Progress: " + progress);
         return smoothed_progress;
     }
     public void MoveToNextQ() {
