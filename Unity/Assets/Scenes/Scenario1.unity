@@ -413,7 +413,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 471089357}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPCControl, Assembly-CSharp
         m_MethodName: MoveToNextQ
         m_Mode: 1
@@ -1317,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30863808
@@ -3212,7 +3212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133825999
@@ -4721,7 +4721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216278294
@@ -6527,7 +6527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 44.7, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332795653
@@ -7936,7 +7936,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471089358}
-  - component: {fileID: 471089357}
   m_Layer: 0
   m_Name: OtherCars
   m_TagString: Untagged
@@ -7944,34 +7943,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &471089357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471089356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee11d98d23e3b3f42a6c7b457f19037e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  action_sequences:
-  - NPC_cars_movement_order:
-    - NPC_cars_to_move: 00000000
-      duration: 4
-  - NPC_cars_movement_order:
-    - NPC_cars_to_move: 00000000
-      duration: 4
-    - NPC_cars_to_move: 0100000002000000
-      duration: 3
-  - NPC_cars_movement_order:
-    - NPC_cars_to_move: 0100000002000000
-      duration: 4
 --- !u!4 &471089358
 Transform:
   m_ObjectHideFlags: 0
@@ -10069,7 +10040,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 471089357}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPCControl, Assembly-CSharp
         m_MethodName: MoveToNextQ
         m_Mode: 1
@@ -10329,7 +10300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602761603
@@ -14420,7 +14391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 44.7, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823992993
@@ -16139,7 +16110,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 0
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 2
@@ -16148,7 +16119,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 6
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -16158,7 +16129,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 6
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -19676,7 +19647,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 0
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 2
@@ -19685,7 +19656,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 6
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -19695,7 +19666,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 6
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26389,7 +26360,7 @@ MonoBehaviour:
       smoothOut: 1
       velocity: 3.5
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26399,7 +26370,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 0
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 2
@@ -26408,7 +26379,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 2
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26417,7 +26388,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 5
       isPivot: 1
-      isPivotLeft: 1
+      isLeft: 0
       degrees: 90
       radius: 7
       standby: 0
@@ -26426,7 +26397,7 @@ MonoBehaviour:
       smoothOut: 1
       velocity: 5
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26436,7 +26407,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 0
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 2
@@ -26445,7 +26416,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 4
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26454,7 +26425,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 5
       isPivot: 1
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 90
       radius: 4
       standby: 0
@@ -26463,7 +26434,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 6
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -26941,7 +26912,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 471089357}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPCControl, Assembly-CSharp
         m_MethodName: MoveToNextQ
         m_Mode: 1
@@ -27786,7 +27757,7 @@ MonoBehaviour:
       smoothOut: 0
       velocity: 5
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -27796,7 +27767,7 @@ MonoBehaviour:
       smoothOut: 1
       velocity: 5
       isPivot: 0
-      isPivotLeft: 0
+      isLeft: 0
       degrees: 0
       radius: 0
       standby: 0
@@ -33632,7 +33603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085323483
