@@ -44,7 +44,8 @@ public class CarControl : MonoBehaviour
     }
 
     public List<Action> action_sequences;
-    void Update()
+
+    void FixedUpdate()
     {
         if (moveActive && state < action_sequences.Count) {
             t = Time.time - startTime;
@@ -68,11 +69,8 @@ public class CarControl : MonoBehaviour
                     distance = currentMovesProps[i].distance;
                 }
 
-
                 actionEndTime = timePassed + distance / currentMovesProps[i].velocity;
-
-
-                timePassed = actionEndTime;
+                
 
                 if (t > actionStartTime && t <= actionEndTime) {
                     float actionProgress = (t - actionStartTime) / (distance / currentMovesProps[i].velocity);
@@ -125,6 +123,7 @@ public class CarControl : MonoBehaviour
                     }
                     recentActionIndex = i;
                 }
+                timePassed = actionEndTime;
             }
 
             if (t > timePassed){

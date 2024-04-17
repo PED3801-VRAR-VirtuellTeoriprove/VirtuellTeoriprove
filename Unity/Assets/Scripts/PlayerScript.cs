@@ -63,7 +63,7 @@ public class PlayerScript : MonoBehaviour
         var problem = get_problem(other.gameObject);
         if (problem != null)
         {
-            
+            other.gameObject.SetActive(false);
             if (problem.answers.Length != 4)
             {
                 Debug.LogError("Answers array must have 4 elements");
@@ -89,12 +89,14 @@ public class PlayerScript : MonoBehaviour
         if (answer.isCorrect)
         {
             Debug.Log("From player: Correct Answer");
+            feedbackPanelWrong.SetActive(false);
             feedbackTextCorrect.text = answer.feedback;
             feedbackPanelCorrect.SetActive(true);
         }
         else
         {
             Debug.Log("From player: Incorrect Answer");
+            feedbackPanelCorrect.SetActive(false);
             feedbackTextWrong.text = answer.feedback;
             feedbackPanelWrong.SetActive(true);
         }
